@@ -1,24 +1,24 @@
 def int_to_fat(num):
     temp_n = num
-    out = [0] * 3
-    it = -1
+    out = ""
     
     while True:
-        if temp_n % 2 == 1:
-            out[it] = 1
-            it -= 1
+        out += str(temp_n % 2)
         
         temp_n = temp_n // 2
 
         if temp_n == 1:
-            out[it] = 1
+            out += str(temp_n)
             break
+    
+    out = out + ("0" * (32 - len(out)))
     
     return out
 
+def bin_to_int(num):
+    pass
+
 print(int_to_fat(6))
-
-
 '''
 while True:
     try:
